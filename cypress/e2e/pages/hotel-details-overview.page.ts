@@ -18,6 +18,16 @@ class HotelDetailsOverviewPage extends BasePage {
     checkInContainer: () =>
       cy.get(this.selectors.checkInContainer).should("be.visible"),
   };
+
+  hotelStarsShouldBe(
+    numberOfStars: string
+  ): Cypress.Chainable<JQuery<HTMLElement>> {
+    return this.elements
+      .raitingAndPriceContainer()
+      .contains(`${numberOfStars}-star`)
+      .should("exist")
+      .should("be.visible");
+  }
 }
 
 export const hotelDetailsOverviewPage = new HotelDetailsOverviewPage();

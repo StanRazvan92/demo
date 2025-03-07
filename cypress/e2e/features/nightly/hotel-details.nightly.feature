@@ -7,11 +7,8 @@ Feature: Hotel Details
   # Viewing Detailed Information
   Scenario: View hotel photos and descriptions
     Then I should see a gallery of multiple photos of the hotel
+    Then I should see a list of amenities offered by the hotel
     And I should see a detailed description of the hotel
-
-  # Scenario: Verify amenities listed
-  #   When I view the hotel details page
-  #   Then I should see a list of amenities offered by the hotel
 
   # # Checking Availability and Pricing
   # Scenario: Verify room availability and pricing

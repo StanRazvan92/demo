@@ -7,6 +7,7 @@
 2. Framework is configured to use `chrome` as default brawser
 3. Default timeout for element finding is set to `5000ms`
 4. If the tests are executed headless, **retry policy** is set to `2`
+5. Because the html code and css classes are `obfuscated`, it is required to run english version of search google service
 
 ## Pre-requisites
 

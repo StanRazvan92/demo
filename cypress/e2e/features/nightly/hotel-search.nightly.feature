@@ -15,14 +15,13 @@
   #   And I specify 2 adults and 1 room
   #   Then I should see a list of available hotels near Eiffel Tower
 
-  # # Filters Application
-  # Scenario: Apply star rating and price filter
-  #   When I enter "New York" as the destination
-  #   And I should be able to change check-in to "Sat, Apr 19"
-  #   And I should be able to change check-out to "Sat, Apr 26"
-  #   And I specify 2 adults and 1 room
-  #   And I apply a filter with a star rating of 4 and a price range "$100-$200"
-  #   Then I should see hotels with 4 stars within the $100-$200 price range
+  # Filters Application
+  Scenario: Apply star rating and price filter
+    When I enter "Paris" as the destination
+    And I select "Capital of France" as the destination
+    And I apply a filter with a hotel class of "4"
+    And I select first hotel from result list
+    Then I should see hotels with "4" stars
 
   # Scenario: Apply multiple amenities filters
   #   When I enter "Tokyo" as the destination

@@ -25,3 +25,8 @@ Then("I should see a detailed description of the hotel", () => {
   hotelDetailsNavigationComponent.openAbout();
   hotelDetailsAboutPage.elements.aboutHotelContainer();
 });
+
+Then("I should see a list of amenities offered by the hotel", () => {
+  hotelDetailsNavigationComponent.openAbout();
+  hotelDetailsAboutPage.elements.amenitiesHotelContainer();
+});
