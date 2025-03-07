@@ -17,7 +17,7 @@
 
 1. Install project dependencies with: `npm i`
 
-## Run this demo
+## Multiples ways to run this demo
 
 1. Open cypress interface using `npm run open`
 2. Run all tests using `npm run test`
