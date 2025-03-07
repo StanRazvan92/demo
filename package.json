@@ -1,0 +1,39 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "use:chrome": "cypress run --browser chrome --headless",
+    "open": "cypress open",
+    "test": "npm run use:chrome",
+    "test:smoke": "npm run use:chrome -- --env TAGS=@smoke",
+    "test:nightly": "npm run use:chrome -- --env TAGS=@nightly"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@cypress/webpack-preprocessor": "^6.0.2",
+    "@types/node": "^22.13.9",
+    "cypress": "^14.1.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/features-steps/**/*.ts",
+    "nonGlobalStepDefinitions": false,
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "html": {
+      "enabled": true,
+      "output": "reports/index.html"
+    },
+    "json": {
+      "enabled": true,
+      "output": "reports/result.json"
+    }
+  }
+}
